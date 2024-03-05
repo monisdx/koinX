@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
-import Hero from "./components/Hero";
+import { useEffect } from "react";
+
 import { useNavigate, useParams } from "react-router-dom";
 import useApiCall from "../../hooks/useApiCall";
 import { deepCompare } from "../../utils";
 import Getstarted from "./components/Getstarted";
+import Team from "./components/Team";
 // import Navbar from "../../common/Navbar";
 
 export default function CryptocurrencyDetailsPage() {
@@ -33,9 +34,7 @@ export default function CryptocurrencyDetailsPage() {
         </div>
         <div className="flex mobile:flex-col justify-between mobile:gap-5 widescreen:gap-10 items-start w-full mt-3 ">
           <div className="flex flex-col widescreen:flex-1 w-full">
-            <p className="bg-foreground">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, nemo.
-            </p>
+            <Team/>
             <p className="bg-foreground mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, molestiae.</p>
 
           </div>

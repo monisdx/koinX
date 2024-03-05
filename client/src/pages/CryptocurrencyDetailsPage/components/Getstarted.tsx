@@ -1,10 +1,26 @@
 import started from "../../../assets/images/started.png"
 
+const data =[
+    {
+     name: "Ethereum",
+     value: "8.21%"
+    },
+    {
+     name: "Bitcoin",
+     value: "8.21%"
+    },
+    {
+     name: "Polygon",
+     value: "8.21%"
+    },
+
+]
+
 export default function Getstarted() {
     return (
-      <section className="flex flex-col justify-center items-center gap-2">
+      <section className="flex flex-col justify-center items-center gap-5">
         <div className="flex flex-col justify-evenly items-center bg-blue rounded-xl p-10 gap-3">
-            <h3 className="text-[25px] text-center font-medium text-foreground max-w-[300px]">Get Started with KoinX for FREE</h3>
+            <h3 className="text-[25px] text-center font-semibold text-foreground max-w-[300px]">Get Started with KoinX for FREE</h3>
             <p className="text-[15px] text-center font-normal  text-foreground ">With our range of features that you can equip for free, KoinX allows you
              to be more educated and aware of your tax reports</p>
             <img src={started} alt="started" />
@@ -12,7 +28,17 @@ export default function Getstarted() {
             Get Started for FREE -{">"}
             </button>
         </div>
-        <div>
+        <div className="flex flex-col justify-center items-start bg-foreground rounded-xl p-6 gap-2 w-full">
+            <h3 className="text-[25px] font-semibold text-black"> Trending Coins (24H)</h3>
+            <div className="flex flex-col justify-center items-start gap-2 w-full">
+                {data.map((d,i)=>(
+                    <div key={i} className="flex justify-between items-center w-full">
+                        <p className="text-[18px] font-medium text-black">{d.name}</p>
+                        <span className="text-[16px] font-medium text-secondary bg-green px-2 rounded-md">{d.value}</span>
+                    </div>
+                ))}
+
+            </div>
 
         </div>
         
