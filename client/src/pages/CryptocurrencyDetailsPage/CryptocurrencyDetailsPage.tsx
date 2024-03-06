@@ -5,7 +5,10 @@ import useApiCall from "../../hooks/useApiCall";
 import { deepCompare } from "../../utils";
 import Getstarted from "./components/Getstarted";
 import Team from "./components/Team";
-// import Navbar from "../../common/Navbar";
+import Tokenomics from "./components/Tokenomics";
+import About from "./components/About";
+import Sentiment from "./components/Sentiment";
+
 
 export default function CryptocurrencyDetailsPage() {
   const { id } = useParams();
@@ -33,18 +36,16 @@ export default function CryptocurrencyDetailsPage() {
           <p className="text-[14px] text-black">Bitcoin</p>
         </div>
         <div className="flex mobile:flex-col justify-between mobile:gap-5 widescreen:gap-10 items-start w-full mt-3 ">
-          <div className="flex flex-col widescreen:flex-1 w-full">
+          <div className="flex flex-col widescreen:flex-1 w-full gap-6">
+            <Sentiment/>
+            <About/>
+            <Tokenomics/>
             <Team/>
-            <p className="bg-foreground mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, molestiae.</p>
-
           </div>
           <div className="flex widescreen:flex-[0.5] w-full">
             <Getstarted/>
           </div>
-
         </div>
-
-
       </div>
     </>
   );

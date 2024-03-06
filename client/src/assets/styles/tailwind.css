@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-background text-front font-poppins scroll-smooth;
+    @apply bg-background  font-poppins scroll-smooth;
   }
 
   body {
@@ -24,6 +24,14 @@
   .padding {
     @apply px-6 widescreen:px-16 py-10 widescreen:py-16;
   }
+}
+
+.blue-gradient{
+  background: linear-gradient(135deg, #73eca1, #1666ab );
+}
+
+.red-gradient{
+  background: linear-gradient(135deg, #f7985d, #f14038);
 }
 
 .sidebar {
