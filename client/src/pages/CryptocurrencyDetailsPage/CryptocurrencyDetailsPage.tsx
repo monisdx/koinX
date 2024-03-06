@@ -8,6 +8,7 @@ import Team from "./components/Team";
 import Tokenomics from "./components/Tokenomics";
 import About from "./components/About";
 import Sentiment from "./components/Sentiment";
+import Performance from "./components/Performance";
 
 
 export default function CryptocurrencyDetailsPage() {
@@ -36,13 +37,14 @@ export default function CryptocurrencyDetailsPage() {
           <p className="text-[14px] text-black">Bitcoin</p>
         </div>
         <div className="flex mobile:flex-col justify-between mobile:gap-5 widescreen:gap-10 items-start w-full mt-3 ">
-          <div className="flex flex-col widescreen:flex-1 w-full gap-6">
+          <div className="flex flex-col widescreen:w-[65%] w-full gap-6">
+            <Performance/>
             <Sentiment/>
             <About/>
             <Tokenomics/>
             <Team/>
           </div>
-          <div className="flex widescreen:flex-[0.5] w-full">
+          <div className="flex widescreen:w-[35%] w-full">
             <Getstarted/>
           </div>
         </div>
