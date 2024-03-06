@@ -1,5 +1,23 @@
+import {events} from "../../../constants";
+import { useRef } from "react";
+
 
 export default function Sentiment() {
+
+    const scrollRef = useRef();
+
+    const scroll = (direction: string) => {
+        const { current } = scrollRef;
+        
+    
+        if(direction === 'left') {
+          current.scrollLeft -= 490;
+        }
+        else{
+          current.scrollLeft += 490;
+        }
+      }
+
     return (
       <section className="flex flex-col justify-center items-start bg-foreground rounded-xl p-6 gap-2 w-full">
         <h3 className="text-[25px] font-semibold text-black">Sentiment</h3>
@@ -7,8 +25,26 @@ export default function Sentiment() {
             <h2 className="text-[20px] font-medium text-gray mt-2">Key Events</h2>
             <div className="flex justify-center items-center w-4 h-4 rounded-full text-[10px] bg-gray text-foreground">i</div>
         </div>
-        <div>
-
+        <div className="flex w-full relative">
+            <div className="flex w-max overflow-x-scroll scroll_style gap-3" ref={scrollRef}>
+                {events.map((event,i)=>(
+                    <div key={i} className={`flex justify-center items-start p-3 gap-2 bg-[${event.color}] bg-light_blue min-w-[500px] rounded-lg`}>
+                        <img src={event.image} alt="img" className=" w-[50px] h-[50px] rounded-full"/>
+                        <div className="flex flex-col justify-center items-start gap-2">
+                            <h2 className="text-[12px] font-medium text-black">{event.title}</h2>
+                            <p className="text-[12px] font-normal text-light_gray">{event.description}</p>
+                        </div>
+                    </div>
+                ))} 
+            </div>
+            <div className="flex justify-between items-center w-full p-3 absolute bottom-[30%] cursor-pointer">
+                <div className="flex justify-center items-center w-[50px] h-[50px] rounded-full bg-foreground" onClick={()=> scroll('left')}>
+                    <span className="text-[25px] text-black font-medium">&lt;</span>
+                </div>
+                <div className="flex justify-center items-center w-[50px] h-[50px] rounded-full bg-foreground" onClick={()=> scroll('right')}>
+                    <span className="text-[25px] text-black font-medium">&gt;</span>
+                </div>
+            </div>
         </div>
         <div className="flex justify-center items-center gap-2">
             <h2 className="text-[20px] font-medium text-gray mt-2 ">Analyst Estimates</h2>

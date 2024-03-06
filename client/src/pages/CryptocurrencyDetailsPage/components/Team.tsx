@@ -9,7 +9,7 @@ export default function Team() {
         </p>
         <div className="flex flex-col justify-start items-center gap-4 w-full">
             {team.map((t,i)=>(
-                <div key={i} className="flex mobile:flex-col justify-center items-center bg-light_blue py-2 px-4 w-full gap-8 rounded-lg">
+                <div key={i} className="flex mobile:flex-col justify-center items-center bg-light_blue mobile:py-4 py-2 px-4 w-full mobile:gap-4 gap-8 rounded-lg">
                     <div className="flex  flex-col justify-center items-center gap-1 min-w-[110px]">
                         <img src={t.image} alt="img" className="w-[110px] h-[110px]" />
                         <p className="text-[14px] font-medium text-black">{t.name}</p>

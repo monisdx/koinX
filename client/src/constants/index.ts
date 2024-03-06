@@ -1,6 +1,8 @@
 import person1 from "../assets/images/person1.png";
 import person2 from "../assets/images/person2.png";
 import person3 from "../assets/images/person3.png";
+import arrow from "../assets/images/arrow.png";
+import doc from "../assets/images/doc.png";
 
 export const navLinks = [
     {
@@ -35,4 +37,35 @@ export const navLinks = [
       details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, inventore minus ab perspiciatis natus, quam rem dolores culpa eos animi a aliquam optio. Nostrum rerum fugiat quidem alias dolorem voluptatibus eligendi labore in repellat! Maxime ipsa nihil doloremque, voluptas qui vel necessitatibus, porro a repudiandae minima pariatur accusantium cumque eius at non culpa tenetur neque cupiditate? Ipsum repellat magni voluptatum voluptatem molestias pariatur officiis reiciendis."
     },
   ]; 
+
+  export const events = [
+    {
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium expedita ut suscipit",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, inventore minus ab perspiciatis natus, quam rem dolores culpa eos animi a aliquam optio. Nostrum rerum fugiat quidem alias dolorem voluptatibus eligendi labore in repellat! Maxime ipsa nihil doloremque, voluptas qui vel necessitatibu",
+      image: doc,
+      color: "#e7f4fd"
+
+    },
+    {
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium expedita ut suscipit",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, inventore minus ab perspiciatis natus, quam rem dolores culpa eos animi a aliquam optio. Nostrum rerum fugiat quidem alias dolorem voluptatibus eligendi labore in repellat! Maxime ipsa nihil doloremque, voluptas qui vel necessitatibu",
+      image: arrow,
+      color: "#eaf9f4"
+
+    },
+    {
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium expedita ut suscipit",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, inventore minus ab perspiciatis natus, quam rem dolores culpa eos animi a aliquam optio. Nostrum rerum fugiat quidem alias dolorem voluptatibus eligendi labore in repellat! Maxime ipsa nihil doloremque, voluptas qui vel necessitatibu",
+      image: doc,
+      color: "#e7f4fd"
+
+    },
+    {
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium expedita ut suscipit",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, inventore minus ab perspiciatis natus, quam rem dolores culpa eos animi a aliquam optio. Nostrum rerum fugiat quidem alias dolorem voluptatibus eligendi labore in repellat! Maxime ipsa nihil doloremque, voluptas qui vel necessitatibus, porro a repudiandae minima pariatur accusantium cumque eius at non culpa tenetu",
+      image: arrow,
+      color: "#eaf9f4"
+
+    }
+  ]
   

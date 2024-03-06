@@ -5,9 +5,9 @@ export default function Tokenomics() {
       <section className="flex flex-col justify-center items-start bg-foreground rounded-xl p-6 gap-2 w-full">
         <h3 className="text-[25px] font-semibold text-black">Tokenomics</h3>
         <h2 className="text-[20px] font-medium text-black mt-2">Initial Distribution</h2>
-        <div className="flex justify-start items-center">
-            <figure>
-
+        <div className="flex justify-start items-center gap-8">
+            <figure className={`flex justify-center items-center p-8 circular-bar rounded-full w-[180px] h-[180px]`}>
+                <div className="flex bg-foreground rounded-full w-full h-full"/>
             </figure>
             <div className="flex flex-col justify-center items-start gap-2">
                 <div className="flex justify-center items-center gap-2">

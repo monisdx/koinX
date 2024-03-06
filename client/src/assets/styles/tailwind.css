@@ -34,6 +34,18 @@
   background: linear-gradient(135deg, #f7985d, #f14038);
 }
 
+.circular-bar{
+  background-image: conic-gradient( #0081fd 0deg, #0081fd calc(80 * 3.6deg), #f6a104 calc(80 * 3.6deg));
+}
+
+.scrollbar_style::-webkit-scrollbar{
+  display: none;
+}
+
+.scroll_style{
+  scrollbar-width: none;
+}
+
 .sidebar {
   -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
