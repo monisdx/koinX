@@ -1,7 +1,5 @@
 import { useRef, useEffect } from "react";
-import useApiCall from "../../../hooks/useApiCall";
 import { useNavigate } from "react-router-dom";
-import { deepCompare } from "../../../utils";
 import { twMerge } from "tailwind-merge";
 
 interface cointype {
@@ -10,12 +8,19 @@ interface cointype {
     name: string;
     symbol: string;
     thumb: string;
-    data: {sparkline: string; price: string; price_change_percentage_24h: { usd: number } };
-    
+    data: {
+      sparkline: string;
+      price: string;
+      price_change_percentage_24h: {
+        usd: number;
+      };
+    };
   };
 }
 
-export function Recommendedcard({data}:any) {
+export function Recommendedcard({ data }: any) {
+  const navigate = useNavigate();
+
   const scrollRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   function scroll(direction: string) {
@@ -24,16 +29,8 @@ export function Recommendedcard({data}:any) {
       behavior: "smooth",
     });
   }
-  // const navigate = useNavigate();
-  // const info = useApiCall("/search/trending");
 
-  // useEffect(() => {
-  //   if (info.data && deepCompare(info.data, {})) {
-  //     navigate("/error");
-  //   }
-  // }, [info.data]);
-
-  // console.log(info.data);
+  // console.log(data?.coins[0]?.item.data?.sparkline);
 
   return (
     <div className="flex w-full relative">
@@ -45,9 +42,12 @@ export function Recommendedcard({data}:any) {
           <div
             key={d?.item?.id}
             className={twMerge(
-              `flex flex-col justify-center items-start p-3 gap-2 bg-foreground min-w-[200px] rounded-lg border border-light_gray`,
+              `flex flex-col justify-center items-start p-3 gap-2 bg-foreground min-w-[200px] rounded-lg border border-light_gray cursor-pointer`,
               d.item.data.price.includes("sub title") && "hidden"
             )}
+            onClick={() => {
+              navigate(`/cryptocurrencies/${d?.item?.id}`);
+            }}
           >
             <div className="flex justify-start items-center gap-1">
               <img

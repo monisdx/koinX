@@ -2,13 +2,11 @@ import { useState } from 'react'
 import {navLinks} from '../constants'
 import menu from '../assets/images/menu.svg'
 import close from '../assets/images/close.svg'
-// import logo from '../assets/images'
 import logo from '../assets/images/logo.png'
 
 
 export default function Navbar() {
 
-  const [active,setactive] = useState('');
   const [toggle, settoggle] = useState(false);
   
   return (

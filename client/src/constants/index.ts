@@ -97,4 +97,24 @@ export const sectionLinks = [
 
     }
   ]
+
+  export const analystbars = [
+    {
+      title:'Buy',
+      perc: '76%',
+      color: '#0dbb83'
+    },
+    {
+      title:'Hold',
+      perc: '8%',
+      color: "#a4a1a1",
+        
+    },
+    {
+      title:'Sell',
+      perc: '16%',
+      color: '#f03649'
+    },
+
+  ]
   
