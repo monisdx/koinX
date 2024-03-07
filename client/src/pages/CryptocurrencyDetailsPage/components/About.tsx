@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import tax1 from "../../../assets/images/tax1.png";
 import tax2 from "../../../assets/images/tax2.png";
 
-export default function About() {
+export default function About({detail}:{detail: string}) {
     const { id } = useParams();
 
     return (
@@ -10,10 +10,7 @@ export default function About() {
          <h3 className="text-[25px] font-semibold text-black">About {id && id?.charAt(0).toUpperCase() + id?.slice(1)}</h3>
          <div className="flex flex-col justify-center items-start gap-2">
             <h2 className="text-[20px] font-medium text-black">What is {id && id?.charAt(0).toUpperCase() + id?.slice(1)}?</h2>
-            <p className="text-[14px] font-normal text-black">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus debitis facilis 
-             expedita vel id doloremque explicabo quasi qui, est vitae fuga voluptas ipsum earum suscipit voluptates ex obcaecati commodi, quos dolor neque nesciunt eius.
-             uam mollitia explicabo odio a dicta labore, quas aliquid ipsam minus quod voluptatibus esse, excepturi quam.
-            </p>
+            <p className="text-[14px] font-normal text-black">{detail.slice(0,650)}</p>
          </div>
          <hr className="border-[#e3dfdf] w-full "/>
          <div className="flex flex-col justify-center items-start gap-2">

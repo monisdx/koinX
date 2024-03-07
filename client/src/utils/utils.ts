@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export function generateRandomString(length: number, seed?: string) {
   let result = "";
   const characters =
@@ -144,4 +146,20 @@ export function deepCompare(obj1: object, obj2: object) {
     JSON.stringify(obj1).replaceAll(" ", "").replaceAll("\n", "") ===
     JSON.stringify(obj2).replaceAll(" ", "").replaceAll("\n", "")
   );
+}
+
+export function getFormattedDate(originalDate: string) {
+  const date = new Date(originalDate);
+
+  const formattedDate = moment(date).format("MMM D, YYYY");
+
+  const today = moment();
+  const yearsDiff = today.diff(date, "years");
+
+  const finalFormattedDate = `${formattedDate} (about ${yearsDiff} year${
+    yearsDiff !== 1 ? "s" : ""
+  })`;
+
+  console.log(finalFormattedDate);
+  return finalFormattedDate;
 }

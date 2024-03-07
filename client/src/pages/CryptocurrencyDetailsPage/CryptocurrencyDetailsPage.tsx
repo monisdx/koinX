@@ -54,17 +54,18 @@ export default function CryptocurrencyDetailsPage() {
             <Hero
               symbol={coininfo?.data?.symbol || ""}
               logo={coininfo?.data?.image?.thumb || ""}
+              rank={coininfo?.data?.market_cap_rank || 0}
             />
             <Sectionbar />
-            <Performance />
+            <Performance data={coininfo?.data}/>
             <Sentiment />
-            <About />
+            <About detail={coininfo?.data?.description?.en || ""}/>
             <Tokenomics />
             <Team />
             <Recommended data={info?.data} />
           </div>
           <div className="flex widescreen:w-[35%] w-full">
-            <Getstarted data={info?.data} />
+            <Getstarted data={info?.data}/>
           </div>
         </div>
       </div>

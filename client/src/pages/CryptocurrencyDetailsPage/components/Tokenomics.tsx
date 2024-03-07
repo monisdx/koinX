@@ -6,7 +6,8 @@ export default function Tokenomics() {
         <h3 className="text-[25px] font-semibold text-black">Tokenomics</h3>
         <h2 className="text-[20px] font-medium text-black mt-2">Initial Distribution</h2>
         <div className="flex mini:flex-col justify-start items-center mini:gap-2 gap-8">
-            <figure className={`flex justify-center items-center mobile:p-5 p-8 circular-bar rounded-full mobile:w-[100px] mobile:h-[100px] w-[180px] h-[180px]`}>
+            <figure className={`flex justify-center items-center mobile:p-5 p-8  rounded-full mobile:w-[100px] mobile:h-[100px] w-[180px] h-[180px]`} 
+            style={{backgroundImage: `conic-gradient( #0081fd 0deg, #0081fd calc(80 * 3.6deg), #f6a104 calc(80 * 3.6deg))`}}>
                 <div className="flex bg-foreground rounded-full w-full h-full"/>
             </figure>
             <div className="flex flex-col justify-center items-start gap-2">

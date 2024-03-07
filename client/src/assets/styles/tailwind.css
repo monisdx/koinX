@@ -34,9 +34,6 @@
   background: linear-gradient(135deg, #f7985d, #f14038);
 }
 
-.circular-bar{
-  background-image: conic-gradient( #0081fd 0deg, #0081fd calc(80 * 3.6deg), #f6a104 calc(80 * 3.6deg));
-}
 
 .scrollbar_style::-webkit-scrollbar{
   display: none;

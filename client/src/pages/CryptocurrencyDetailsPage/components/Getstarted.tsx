@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import useApiCall from "../../../hooks/useApiCall";
-import { deepCompare } from "../../../utils";
 import started from "../../../assets/images/started.png"
 
 interface cointype {
@@ -15,23 +11,23 @@ interface cointype {
       };
 }
 
-// interface datatype {
-//   
-//   coins: Array<{
-//     item: {
-//       id: string;
-//       name: string;
-//       symbol: string;
-//       thumb: string;
-//       data: {
-//         price: string;
-//         sparkline: string;
-//         price_change_percentage_24h: { usd: number };
-//       };
-//     };
-//   }>;
-// 
-// };
+interface datatype {
+  
+  coins: Array<{
+    item: {
+      id: string;
+      name: string;
+      symbol: string;
+      thumb: string;
+      data: {
+        price: string;
+        sparkline: string;
+        price_change_percentage_24h: { usd: number };
+      };
+    };
+  }>;
+ 
+};
 
 export default function Getstarted({data}:any) {
 

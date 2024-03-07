@@ -4,12 +4,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import { deepCompare } from "../../../utils";
 import TradingViewWidget from "./TradingViewWidget";
 
-export default function Hero({
-  symbol,
-  logo,
-}: {
+export default function Hero({symbol,logo,rank}: {
   symbol: string;
   logo: string;
+  rank: number;
 }) {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -44,7 +42,7 @@ export default function Hero({
         </p>
         <div className="flex justify-center items-center px-3 py-2 rounded-lg bg-gray ml-4">
           <span className="text-[16px] md:text-[14px] text-foreground">
-            Rank #1
+            Rank #{rank}
           </span>
         </div>
       </div>
