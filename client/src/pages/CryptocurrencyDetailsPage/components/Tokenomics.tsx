@@ -26,9 +26,6 @@ export default function Tokenomics() {
         officia fuga dolorum quidem velit deserunt fugit atque molestiae ut minima aspernatur est, similique modi maiores? Illo nobis, 
         impedit neque molestias minima soluta natus aliquid sunt maiores quod nihil, voluptate corporis quibusdam dolores fugit maxime
          repellendus modi, ipsa saepe dolorum perferendis assumenda? Suscipit, maxime corrupti?</p>
-
-        
-        
       </section>
     );
   }
