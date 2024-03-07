@@ -1,8 +1,10 @@
 import Fundamental from "./Fundamental";
 import { Horizonbar } from "./Horizonbar";
 import { getFormattedDate } from "../../../utils";
+import { ApiResponse } from "../../../types";
 
-export default function Performance({ data }: any) {
+export default function Performance(props:{data: ApiResponse<`/coins/${string}`>;}) {
+  const {data} = props;
   const athFormattedDate = getFormattedDate(data?.market_data?.ath_date?.usd);
   const atlFormattedDate = getFormattedDate(data?.market_data?.atl_date?.usd);
 

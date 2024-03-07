@@ -37,10 +37,10 @@ type ApiEndpoints = [
          current_price: { usd: number };
          ath: { usd: number};
          ath_change_percentage: { usd: number};
-         ath_date: string;
+         ath_date: { usd: string};
          atl: { usd: number};
          atl_change_percentage: { usd: number};
-         atl_date: string;
+         atl_date: { usd: string};
          market_cap: { usd: number};
          total_volume: { usd: number};
          high_24h: { usd: number};

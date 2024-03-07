@@ -50,7 +50,7 @@ export default function Hero({symbol,logo,rank}: {
         <div className="flex flex-col justify-center items-start">
           <div className="flex justify-center items-center gap-6">
             <span className="text-[30px] md:text-[25px] font-bold text-black">
-              ${data?.usd}
+              ${data?.usd.toLocaleString()}
             </span>
             <div className=" flex justify-center items-center gap-2">
               <span
@@ -74,7 +74,7 @@ export default function Hero({symbol,logo,rank}: {
             </div>
           </div>
           <span className="text-[16px] md:text-[14px] font-medium text-black">
-            &#8377; {data?.inr}
+            &#8377; {data?.inr.toLocaleString()}
           </span>
         </div>
       </div>

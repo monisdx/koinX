@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
+import { ApiResponse } from "../../../types";
 
 interface cointype {
   item: {
@@ -18,7 +19,9 @@ interface cointype {
   };
 }
 
-export function Recommendedcard({ data }: any) {
+export function Recommendedcard(props:{data: ApiResponse<"/search/trending">;}) {
+
+  const {data} = props;
   const navigate = useNavigate();
 
   const scrollRef = useRef() as React.MutableRefObject<HTMLDivElement>;

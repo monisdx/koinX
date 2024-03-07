@@ -1,8 +1,10 @@
+import { ApiResponse } from "../../../types";
 import { Recommendedcard } from "./Recommendedcard";
 
 
 
-export default function Recommended({data}:any) {
+export default function Recommended(props:{data: ApiResponse<"/search/trending">;}) {
+  const {data} = props;
 
     return (
       <section className="flex flex-col justify-center items-start bg-foreground rounded-xl p-6 gap-4 w-full">

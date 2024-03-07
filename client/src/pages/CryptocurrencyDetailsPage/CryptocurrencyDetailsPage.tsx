@@ -57,15 +57,15 @@ export default function CryptocurrencyDetailsPage() {
               rank={coininfo?.data?.market_cap_rank || 0}
             />
             <Sectionbar />
-            <Performance data={coininfo?.data}/>
+            {coininfo?.data && <Performance data={coininfo?.data} />}
             <Sentiment />
-            <About detail={coininfo?.data?.description?.en || ""}/>
+            <About detail={coininfo?.data?.description?.en || ""} />
             <Tokenomics />
             <Team />
-            <Recommended data={info?.data} />
+            {info?.data && <Recommended data={info?.data} />}
           </div>
           <div className="flex widescreen:w-[35%] w-full">
-            <Getstarted data={info?.data}/>
+            {info?.data && <Getstarted data={info?.data} />}
           </div>
         </div>
       </div>
