@@ -36,21 +36,21 @@ export default function About() {
          <hr className="border-[#e3dfdf] w-full "/>
          <h3  className="text-[25px] font-semibold text-black mt-4">Already Holding {id && id?.charAt(0).toUpperCase() + id?.slice(1)}?</h3>
          <div className="flex mobile:flex-col justify-between mobile:items-start items-center gap-4 w-full">
-            <div className="flex justify-center mobile:justify-start items-center blue-gradient rounded-lg p-3 gap-4 mobile:w-full">
+            <div className="flex mini:flex-col justify-center mobile:justify-start items-center blue-gradient rounded-lg p-3 gap-4 mobile:w-full">
                 <img src={tax1} alt="tax1" className="w-[150px] h-[150px] rounded-lg" />
                 <div className="flex flex-col justify-center items-start gap-2">
                     <h2 className="text-[20px] font-medium text-foreground">Calculate your Profits</h2>
                     <button type='button' className=' px-5 py-2 font-medium text-[15px] rounded-lg  text-black bg-foreground outline-none border-none'>
-                     Check Now -{">"}
+                     Check Now &#8594;
                     </button>
                 </div>
             </div>
-            <div className="flex justify-center mobile:justify-start items-center red-gradient rounded-lg p-3 gap-4 mobile:w-full">
+            <div className="flex mini:flex-col justify-center mobile:justify-start items-center red-gradient rounded-lg p-3 gap-4 mobile:w-full">
                 <img src={tax2} alt="tax1" className="w-[150px] h-[150px] rounded-lg" />
                 <div className="flex flex-col justify-center items-start gap-2">
                     <h2 className="text-[20px] font-medium text-foreground">Calculate your tax liability</h2>
                     <button type='button' className=' px-5 py-2 font-medium text-[15px] rounded-lg  text-black bg-foreground outline-none border-none'>
-                     Check Now -{">"}
+                     Check Now &#8594;
                     </button>
                 </div>
             </div>

@@ -28,7 +28,8 @@ export default function Sentiment() {
           {events.map((event, i) => (
             <div
               key={i}
-              className={`flex justify-center items-start p-3 gap-2 bg-[${event.color}] bg-light_blue min-w-[500px] rounded-lg`}
+              className={`flex justify-center items-start p-3 gap-2 min-w-[500px] rounded-lg`}
+              style={{ background: event.color }}
             >
               <img
                 src={event.image}
@@ -69,7 +70,7 @@ export default function Sentiment() {
           i
         </div>
       </div>
-      <div className="flex justify-between items-center gap-6 mt-2 w-full">
+      <div className="flex mini:flex-col justify-between items-center gap-6 mt-2 w-full">
         <div className="flex justify-center items-center w-[100px] h-[100px] text-[30px] text-secondary rounded-full bg-light_green min-w-[100px]">
           76%
         </div>

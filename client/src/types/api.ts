@@ -5,6 +5,35 @@ type ApiEndpoints = [
     uri: "/simple/price";
     response: Record<string, Record<string, number>>;
     parms: { ids: string; vs_currencies: string; include_24hr_change: boolean };
+  },
+  {
+    uri: "/search/trending";
+    response: {
+      coins: Array<{
+        item: {
+          id: string;
+          name: string;
+          symbol: string;
+          thumb: string;
+          data: {
+            price: string;
+            sparkline: string;
+            price_change_percentage_24h: { usd: number };
+          };
+        };
+      }>;
+    };
+  },
+  {
+    uri: `/coins/${string}`;
+    response: {
+      id: string;
+      symbol: string;
+      name: string;
+      description: { en: string };
+      image: { thumb: string };
+      market_data: { current_price: { usd: string } };
+    };
   }
 ];
 

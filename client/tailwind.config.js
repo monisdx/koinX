@@ -6,6 +6,8 @@ export default {
       screens: {
         mobile: { max: "780px" },
         widescreen: { min: "780px" },
+        mini: {max:"380px"},
+        md:{max:"450px"}
       },
       colors: {
         primary: "#f03649",
@@ -16,9 +18,9 @@ export default {
         light_gray: "#a4a1a1",
         blue: "#0052fe",
         light_blue: "#e7f4fd",
-        'green-200': "#15af7b",
         green : "#e7faf4",
         light_green: "#eaf9f4",
+        light_red: "#ffcdd2",
         barblue: "#0081fd",
         barorgange: "#f6a104",
       },
